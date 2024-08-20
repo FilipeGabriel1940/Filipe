@@ -1,1 +1,18 @@
-*.skb
+package Exercicios;
+import java.util.Random;
+import java.util.Scanner;
+public class sorteio_de_numero {
+    public static void main(String[] args) {
+        System.out.println("Bem-vindo ao Jogo de Adivinhação!");
+        Random gerador = new Random();
+        int number = gerador.nextInt(4)+1;
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Tente adivinhar o número a ser soteado de 1 à 5. ");
+        int palpite = scanner.nextInt();
+        if (palpite == number) {
+            System.out.println("Parabéns!! Você acertou o número sorteado.");
+        }
+        else
+        System.out.println("Você errou :( O número sorteado foi "+number);
+    }
+}
